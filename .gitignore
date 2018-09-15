@@ -1,0 +1,14 @@
+# Filetypes
+.DS_Store
+*.iml
+
+# IDE artifacts
+.vscode/
+.idea/
+
+# Build
+dist/
+node_modules/
+
+# Misc
+npm-debug.log
