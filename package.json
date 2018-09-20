@@ -12,6 +12,10 @@
   },
   "author": "Arthur Verkaik",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Aquarthur/react-redux-scaffolding.git"
+  },
   "dependencies": {
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
