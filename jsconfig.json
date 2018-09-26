@@ -2,11 +2,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@actions/*": ["./src/actions/*"],
-      "@components/*": ["./src/components/*"],
-      "@helpers/*": ["./src/helpers/*"],
-      "@reducers/*": ["./src/reducers/*"],
-      "@styles/*": ["./src/styles/*"]
+      "~actions/*": ["./src/actions/*"],
+      "~components/*": ["./src/components/*"],
+      "~helpers/*": ["./src/helpers/*"],
+      "~reducers/*": ["./src/reducers/*"],
+      "~styles/*": ["./src/styles/*"]
     }
   },
   "include": ["src"]
