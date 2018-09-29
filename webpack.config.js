@@ -6,7 +6,7 @@ const PUBLIC_DIR = path.resolve(__dirname, "./public");
 const DIST_DIR = path.resolve(__dirname, "./dist");
 
 module.exports = {
-  entry: ["@babel/polyfill", `${APP_DIR}/index.js`],
+  entry: ["@babel/polyfill", `${APP_DIR}/index.jsx`],
   output: {
     filename: "bundle.js",
     path: DIST_DIR,
