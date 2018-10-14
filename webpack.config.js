@@ -19,11 +19,11 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "~actions": path.join(APP_DIR, "/actions"),
-      "~components": path.join(APP_DIR, "/components"),
-      "~helpers": path.join(APP_DIR, "/helpers"),
-      "~reducers": path.join(APP_DIR, "/reducers"),
-      "~styles": path.join(APP_DIR, "/styles"),
+      "~actions": path.join(APP_DIR, "./actions"),
+      "~components": path.join(APP_DIR, "./components"),
+      "~helpers": path.join(APP_DIR, "./helpers"),
+      "~reducers": path.join(APP_DIR, "./reducers"),
+      "~styles": path.join(APP_DIR, "./styles"),
     },
     extensions: [".js", ".jsx"],
     modules: [APP_DIR, path.join(__dirname, "./node_modules")],
