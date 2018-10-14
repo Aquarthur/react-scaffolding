@@ -7,8 +7,12 @@
     "start": "webpack-dev-server --hot --inline --mode=development --open",
     "build": "webpack -p",
     "watch": "webpack --watch",
-    "precommit": "pretty-quick --staged --filepath='./src'",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --filepath='./src'",
+    }
   },
   "author": "Arthur Verkaik",
   "license": "ISC",
