@@ -6,7 +6,7 @@ const PUBLIC_DIR = path.resolve(__dirname, "./public");
 const DIST_DIR = path.resolve(__dirname, "./dist");
 
 module.exports = {
-  entry: ["@babel/polyfill", `${APP_DIR}/index.js`],
+  entry: ["@babel/polyfill", `${APP_DIR}/index.jsx`],
   output: {
     filename: "bundle.js",
     path: DIST_DIR,
@@ -17,12 +17,23 @@ module.exports = {
     port: 3000,
     stats: "minimal",
   },
+  resolve: {
+    alias: {
+      "~actions": path.join(APP_DIR, "/actions"),
+      "~components": path.join(APP_DIR, "/components"),
+      "~helpers": path.join(APP_DIR, "/helpers"),
+      "~reducers": path.join(APP_DIR, "/reducers"),
+      "~styles": path.join(APP_DIR, "/styles"),
+    },
+    extensions: [".js", ".jsx"],
+    modules: [APP_DIR, path.join(__dirname, "./node_modules")],
+  },
   module: {
     rules: [
       {
         test: [/\.js$/, /\.jsx$/],
         exclude: [/node_modules/, /dist/],
-        use: ["babel-loader"],
+        use: ["babel-loader", "eslint-loader"],
       },
       {
         test: /\.scss$/,

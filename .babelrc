@@ -3,16 +3,6 @@
   "plugins": [
     "react-hot-loader/babel",
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-object-rest-spread",
-    ["module-resolver", {
-      "root": ["."],
-      "alias": {
-        "~actions": "./src/actions",
-        "~components": "./src/components/",
-        "~helpers": "./src/helpers/",
-        "~reducers": "./src/reducers/",
-        "~styles": "./src/styles"
-      }
-    }]
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }
