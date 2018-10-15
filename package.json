@@ -11,7 +11,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged --filepath='./src'",
+      "pre-commit": "pretty-quick --staged --filepath='./src'"
     }
   },
   "author": "Arthur Verkaik",
