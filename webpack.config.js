@@ -36,9 +36,9 @@ module.exports = {
         use: ["babel-loader", "eslint-loader"],
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         include: [APP_DIR],
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.json$/,
