@@ -1,8 +1,8 @@
 const path = require("path");
+const webpack = require("webpack");
 
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ErrorOverlayPlugin = require("error-overlay-webpack-plugin");
 
 const parts = require("./webpack.parts");
 
@@ -31,7 +31,6 @@ const common = merge([
       modules: [APP_DIR, path.join(__dirname, "./node_modules")],
     },
     plugins: [
-      new ErrorOverlayPlugin(),
       new HtmlWebpackPlugin({
         template: `${PUBLIC_DIR}/index.html`,
         filename: "index.html",
@@ -50,6 +49,7 @@ const development = merge([
     port: process.env.PORT,
   }),
   parts.hotReload(),
+  parts.generateSourceMaps({ type: "inline-source-map" }),
 ]);
 
 const production = merge([

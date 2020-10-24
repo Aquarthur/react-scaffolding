@@ -17,14 +17,14 @@ exports.devServer = ({ host, port } = {}) => ({
     host,
     port,
     historyApiFallback: true,
+    overlay: true,
   },
 });
 
 exports.hotReload = () => ({
   plugins: [
-    new ReactRefreshWebpackPlugin({
-      disableRefreshCheck: true, // this should be removed once the plugin is updated past 0.2.0
-    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin(),
   ],
 });
 
@@ -114,6 +114,6 @@ exports.loadJS = ({ include, exclude } = {}) => ({
 
 exports.minifyJS = () => ({
   optimization: {
-    minimizer: [new TerserPlugin({ sourceMap: true })],
+    minimizer: [new TerserPlugin()],
   },
 });
